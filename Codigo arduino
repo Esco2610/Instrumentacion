@@ -1,0 +1,15 @@
+int pinSensor = A0; 
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int lectura = analogRead(pinSensor); 
+  float voltaje = lectura * (5.0 / 1023.0);
+
+  Serial.println("Voltaje"); 
+  Serial.println(voltaje); 
+  
+  delay(100); 
+}
